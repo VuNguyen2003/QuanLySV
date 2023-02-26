@@ -1,6 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html{
-    background-color: #EDEDED;
+    /* width: 64.5%;
+    height: 100vh; */
+    background-color: gray;
 }
-.logo_hcmue{
-    width: 70px;
+/* Phần bên trái------------------------------------------- */
+ /* khung bên trái */
+#left{
+    width: 20%;
+    height: 95vh;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 2.5vh;
+    margin-left: 1%;
 }
+
+#logo{
+    height:5%;
+}
+/* căn giữa logo */
+#logo img{
+    margin-left: 50%;
+    margin-bottom: 50%;
+    transform: translate(-50%,50%);
+}
+
+
+#menu{
+    height: 95%;
+    /* bỏ chấm list */
+    list-style-type: none;
+    /* căn giữa menu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* chữ khung bên trái */
+#left #menu li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 5%;
+}
+
+/* Phần mid-------------------------------------------- */
