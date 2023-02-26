@@ -7,7 +7,7 @@
 html{
     /* width: 64.5%;
     height: 100vh; */
-    background-color: gray;
+    background-color: #EDEDED;
 }
 /* Phần bên trái------------------------------------------- */
  /* khung bên trái */
@@ -29,7 +29,6 @@ html{
     margin-bottom: 50%;
     transform: translate(-50%,50%);
 }
-
 
 #menu{
     height: 95%;
