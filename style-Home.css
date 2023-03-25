@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:20px;
+}
+.center-only1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gradient-text{
+    background: linear-gradient(to right,rgb(56, 21, 239),rgb(10, 152, 221));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.gradient-text2{
+    background: linear-gradient(to bottom right,rgb(0, 232, 255),rgb(56, 21, 239));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.blue-white{
+    background-color: rgb(21, 95, 240);
+    color: white;
+}
+.blue-text-border{
+    color: rgb(56, 21, 239);
+    border: 4px solid;
+    border-image-source: linear-gradient(to bottom right,rgb(0, 232, 255),rgb(56, 21, 239));
+    border-image-slice: 1;
+}
+.font-size-170px{
+    font-size: 170px !important;
+}
+.tieu-de{
+    height: 80px;
+    display: flex;
+}
+.text-tieu-de{
+    margin: auto;
+    height: auto;
+    font-weight: 1000;
+    font-size: 40px;
+    position: relative;
+}
+.text-tieu-de::after{
+    content: "";
+    width: 10vw;
+    height: 4px;
+    background: linear-gradient(to right,rgb(56, 21, 239),rgb(10, 152, 221));
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+/* Phần giới thiệu ----------------------------------------------------------------------------------------------*/
+.gioi-Thieu{
+    height: 100vh;
+    background-image: linear-gradient(to top right,rgb(57, 179, 240),rgb(56, 21, 239));
+}
+.gioi-Thieu header{
+    height: 68px;
+}
+.gioi-Thieu nav{
+    height: 68px;
+    display: flex;
+}
+.gioi-Thieu nav .logo{
+    padding: 4px;
+}
+.gioi-Thieu nav .nav{
+    flex: 1;
+    text-align: right;
+    height: 60%;
+}
+.gioi-Thieu nav .nav ul{
+    height: 100%;
+}
+.gioi-Thieu nav .nav li {
+    display: inline-block;
+    height: 100%;
+    margin-left: -5px;
+}
+.gioi-Thieu nav .nav li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px 30px 0;
+    
+    height: 100%;
+}
+.gioi-Thieu .nav ul li:last-child a{
+    padding-right: 20px;
+}
+.gioi-Thieu nav .ten-Truong{
+    padding-top:4px ;
+    color: white;
+}
+.gioi-Thieu nav .ten-Truong h3{
+    font-weight: 100;
+    font-size: 24px;
+    border-bottom: solid white 3px;
+    padding-bottom: 4px;
+}
+.gioi-Thieu nav .ten-Truong p{
+    font-size: 16px;
+    padding-top: 4px;
+    /* margin-left: -16px; */
+}
+.gioi-Thieu section{
+    height: calc(100% - 68px);
+    display: flex;
+}
+.gioi-Thieu section .text{
+    flex: 4;
+    color: white;
+}
+.gioi-Thieu section .image{
+    flex: 7;
+}
+.gioi-Thieu .text1{
+    text-align: center;
+    line-height: 1.5;
+}
+.gioi-Thieu .text1 h1{
+    font-size: 40px;
+}
+.gioi-Thieu .text1 p{
+    font-size: 24px;
+}
+.gioi-Thieu .text1 p:nth-child(2){
+    border-bottom: 3px white solid;
+    padding: 0 60px;
+}
+.gioi-Thieu .text1 button{
+    margin-top: 30px;
+    padding: 8px 50px;
+    border-radius: 15px;
+    background-color: rgb(21, 95, 240);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.gioi-Thieu section .image img{
+    border-radius: 20px;
+}
+
+/* Phần dịch vụ -------------------------------------------------------------------------------------------------- */
+.dich-Vu{
+    height: 100vh;
+    background-color: rgb(238,238,238);
+}
+.dich-Vu section{
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+.dich-Vu section .item{
+    height: 250px;
+    width: 28%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.dich-Vu .item i{
+    margin-top: 16px;
+    font-size: 150px;
+}
+.dich-Vu .item p{
+    margin-top: 30px;
+    font-size: 22px;
+}
+/* Phần tin tức fanpage ------------------------------------------------------------------------------------------------ */
+.tin-Tuc{
+    height: 100vh;
+    background-color: rgb(21, 95, 240);
+    color: white;
+}
+.tin-Tuc .text-tieu-de::after{
+    background-color: white;
+    background-image: none;
+}
+.tin-Tuc section{
+    display: flex;
+    height: calc(100% - 80px);
+}
+.tin-Tuc section .video{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: flex-start;
+    padding-left:30px ;
+}
+.tin-Tuc section .tin-fanpage{
+    flex: 2;
+    padding: 30px;
+    position: relative;
+}
+.tin-Tuc section .tin-fanpage .image-fanpage{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    border: white solid 20px;
+    border-radius: 30px;
+}
+.tin-Tuc section .video .item-video{
+    margin: 30px 10px 5px;
+    width: 20%;
+    height: 170px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(21, 95, 240);
+}
+.tin-Tuc .item-video p{
+    font-size: 25px;
+}
+/* Phần liên hệ --------------------------------------------------------------------------------------- */
+.lien-He{
+    height: 80vh;
+    color: rgb(21, 95, 240);
+    background-color: rgb(238,238,238);
+}
+.lien-He .tieu-De::after{
+    border-color: rgb(21, 95, 240);
+}
+.lien-He section{
+    padding: 30px 80px;
+    height: 450px;
+    display: flex;
+}
+
+.lien-He section .map{
+    border: rgb(21, 95, 240) solid 4px;
+    height: 100%;
+    flex: 1;
+}
+.lien-He section .thong-tin-lien-he{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+.lien-He section .thong-tin-lien-he div{
+    width: 40%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+footer{
+    height: 20vh;
+    background-color: rgb(21, 95, 240);
+    position: relative;
+}
+footer p{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
