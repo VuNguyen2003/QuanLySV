@@ -343,16 +343,21 @@ footer .text-in-footer{
 
 
 @media screen and (max-width: 815px) {
+    /* Phần giới thiệu ----------------------------------------------------------------------------------------------*/
+    
+    .gioi-Thieu{
+        width: auto;
+    }
     .gioi-Thieu header nav {
         display: flex;
         flex-direction: column;
         
     }
-    .nav{
+    .gioi-Thieu header .nav{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
 
     }
     .text{
@@ -382,6 +387,7 @@ footer .text-in-footer{
         flex-direction: column-reverse;
         align-content: center;
     }
+    /* Phần dịch vụ -------------------------------------------------------------------------------------------------- */
     .dich-Vu{
         height: auto;
     }
@@ -404,4 +410,26 @@ footer .text-in-footer{
         margin-top: 30px;
         font-size: 22px;
     }
+    /* Phần tin tức fanpage ------------------------------------------------------------------------------------------------ */
+    .tin-Tuc section{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    /* Phần liên hệ --------------------------------------------------------------------------------------- */
+    .lien-He{
+        height: auto;
+        width: auto;
+    }
+    /* Phần footer ------------------------------------------------------------------------------------------------------ */
+    .footer{
+        height: auto;
+        width: auto;
+
+    }
 }
+
+
