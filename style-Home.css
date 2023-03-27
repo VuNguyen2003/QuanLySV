@@ -318,7 +318,29 @@ footer .text-in-footer{
         align-content: space-evenly;
     }
 }
+@media screen and (min-width: 1331) and (max-width: 1430px) {
+    
+}
 
+@media screen and (min-width: 1231) and (max-width: 1330px) {
+    
+}
+
+@media screen and (min-width: 1181) and (max-width: 1230px) {
+    
+}
+
+@media screen and (min-width: 1046) and (max-width: 1180px) {
+    
+}
+
+@media screen and (min-width: 951) and (max-width: 1045px) {
+    
+}
+
+@media screen and (min-width: 816) and (max-width: 950px) {
+    
+}
 
 @media screen and (max-width: 815px) {
     .dich-Vu section{
