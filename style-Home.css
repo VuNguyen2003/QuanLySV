@@ -75,6 +75,11 @@
     height: 100vh;
     background-image: linear-gradient(to top right,rgb(57, 179, 240),rgb(56, 21, 239));
 }
+/*chia flex cho log + ten trng*/
+.logoaName{
+    display: flex;
+    flex-direction: row;
+}
 /* lo trường + home bảng tin đang nhập icon phone */
 .gioi-Thieu nav{
     height: 68px;
@@ -88,7 +93,7 @@
 .gioi-Thieu nav .nav{
     flex: 1;
     text-align: right;
-    height: 60%;
+    height: 90%;
 }
 /* home bảng tin đang nhập icon phone */
 .gioi-Thieu nav .nav ul{
@@ -310,13 +315,7 @@ footer .text-in-footer{
 
 
 @media screen and (min-width: 1431) and (max-width: 1660px) {
-    .dich-Vu section{
-        height: calc(100% - 80px);        /*Trừ 80px do phần tiêu dề có height = 80px */
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        align-content: space-evenly;
-    }
+
 }
 @media screen and (min-width: 1331) and (max-width: 1430px) {
     
@@ -342,9 +341,52 @@ footer .text-in-footer{
     
 }
 
+
 @media screen and (max-width: 815px) {
-    .dich-Vu section{
+    .gioi-Thieu header nav {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+    .text{
+        display: block;
+    }
+    .Onl{
+        font-size: 15px;
+        
+    } 
+    .dhsp {
+        font-size: 12px;
+    }
+    .slogan{
+
+    }
+    .image{
+        display: block;
+        height: 20px;
+        width: 90%;
+        align-content: center;
+        position:relative;
+        top: 15%;
+        left: 5%;
+
+    }
+    .gioi-Thieu section{
         flex-direction: column-reverse;
+        align-content: center;
+    }
+    .dich-Vu{
+        height: auto;
+    }
+    .dich-Vu section{
+        flex-direction: column;
     }
 
     .dich-Vu section .item{
