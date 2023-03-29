@@ -420,10 +420,22 @@ footer .text-in-footer{
     }
 
     /* Phần liên hệ --------------------------------------------------------------------------------------- */
-    .lien-He{
+    .lien-He {
         height: auto;
         width: auto;
     }
+    .tieu-de section{
+        display: flex;
+        flex-direction: column;
+        padding: 0cm;
+    }
+    .thong-tin-lien-he{
+        flex-direction: column;
+    }
+    .thong-tin-lien-he > div{
+        height: 50%;
+    }
+    
     /* Phần footer ------------------------------------------------------------------------------------------------------ */
     .footer{
         height: auto;
