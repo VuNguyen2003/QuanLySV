@@ -553,13 +553,10 @@ footer .text-in-footer{
         height: auto;
         width: auto;
     }
-<<<<<<< HEAD
     .lien-He section{
-=======
-    .tieu-de section{
         display: flex;
         flex-direction: column;
-        padding: 0cm;
+        padding: 1em;
     }
     .thong-tin-lien-he{
         flex-direction: column;
@@ -567,13 +564,10 @@ footer .text-in-footer{
     .thong-tin-lien-he > div{
         height: 50%;
     }
-    
-    /* Phần footer ------------------------------------------------------------------------------------------------------ */
-    .footer{
->>>>>>> b39786a545d82088e206f77dfb011978b0b34e12
-        height: auto;
-        display: block;
-        padding: 1.5em 1em;
+    .lien-He section .map{
+        border: rgb(21, 95, 240) solid 0.2em;
+        height: 20em;
+        width: auto;
     }
     /* Từng thông tin */
     .lien-He section .thong-tin-lien-he div{
@@ -581,11 +575,14 @@ footer .text-in-footer{
         height: 2.5em;
         padding-left: 0;
     }
-    .lien-He section .map{
-        border: rgb(21, 95, 240) solid 0.2em;
-        height: 20em;
-    }
+    
+    
     /* Phần footer ------------------------------------------------------------------------------------------------------ */
+    .footer{
+        height: auto;
+        display: block;
+        padding: 1.5em 1em;
+    }
     footer .text-in-footer p{
         font-size: 0.8em;
     }
