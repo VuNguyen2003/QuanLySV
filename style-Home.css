@@ -549,25 +549,14 @@ footer .text-in-footer{
         position: relative;
     }
     /* Phần liên hệ --------------------------------------------------------------------------------------- */
-    .lien-He {
+    .lien-He{
         height: auto;
         width: auto;
     }
     .lien-He section{
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-    }
-    .thong-tin-lien-he{
-        flex-direction: column;
-    }
-    .thong-tin-lien-he > div{
-        height: 50%;
-    }
-    .lien-He section .map{
-        border: rgb(21, 95, 240) solid 0.2em;
-        height: 20em;
-        width: auto;
+        height: auto;
+        display: block;
+        padding: 1.5em;
     }
     /* Từng thông tin */
     .lien-He section .thong-tin-lien-he div{
@@ -575,7 +564,10 @@ footer .text-in-footer{
         height: 2.5em;
         padding-left: 0;
     }
-    
+    .lien-He section .map{
+        border: rgb(21, 95, 240) solid 4px;
+        height: 15em;
+    }
     
     /* Phần footer ------------------------------------------------------------------------------------------------------ */
     .footer{
