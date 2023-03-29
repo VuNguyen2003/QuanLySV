@@ -549,11 +549,28 @@ footer .text-in-footer{
         position: relative;
     }
     /* Phần liên hệ --------------------------------------------------------------------------------------- */
-    .lien-He{
+    .lien-He {
         height: auto;
         width: auto;
     }
+<<<<<<< HEAD
     .lien-He section{
+=======
+    .tieu-de section{
+        display: flex;
+        flex-direction: column;
+        padding: 0cm;
+    }
+    .thong-tin-lien-he{
+        flex-direction: column;
+    }
+    .thong-tin-lien-he > div{
+        height: 50%;
+    }
+    
+    /* Phần footer ------------------------------------------------------------------------------------------------------ */
+    .footer{
+>>>>>>> b39786a545d82088e206f77dfb011978b0b34e12
         height: auto;
         display: block;
         padding: 1.5em 1em;
