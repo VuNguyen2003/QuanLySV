@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang cá nhân</title>
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style-inf.css">
+    <link rel="stylesheet" href="main.css">
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
+    <!-- Biểu dồ tròn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Dashboard Sidebar Menu</title> 
 </head>
 <body>
@@ -102,6 +105,7 @@
 
                     <div class="toggle-switch">
                         <span class="switch"></span>
+                        
                     </div>
                 </li>
                 
@@ -122,12 +126,116 @@
 
             </div>
         </header>
-        <div>
-            <!--code ở đây-->
-        </div>
-    </section>
 
+        <div class="content">
+            <div class="Noi_bat">
+                <h2 class="text">Nổi bật</h2>
+                <div class="hinh_vuong">
+                    <div class="hinh thu1">
+                        <h4>Kết quả học tập</h4>
+                        <div class="noi_dung">
+                            <canvas id="myChart" ></canvas>
+                        </div>
+                    </div>
+
+                    <div class="hinh thu2">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+
+                    <div class="hinh thu3">
+                        <h4>Lịch học hôm nay</h4>
+                        <div class="noi_dung">
+                            <div class="lich">
+                                <div class="phong">I102</div>
+                                <div class="mon">Mạng máy tính</div>
+                                <div class="time">7h20 -> 11h40</div>
+                                <!-- chỗ thêm icon -->
+                            </div>
+
+                            <div class="lich">
+                                <div class="phong">I102</div>
+                                <div class="mon">Mạng máy tính</div>
+                                <div class="time">7h20 -> 11h40</div>
+                                <!-- chỗ thêm icon -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Thong_tin">
+                <h2 class="text">Thông tin</h2>
+                <div class="hinh_vuong">
+                    <div class="ben_trai">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+
+                    <div class="ben_phai">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    
     <script src="Responsive-DarkMode.js"></script>
     <script src="Hide-Menu.js"></script>
+    <!-- Biểu đồ tròn -->
+    <script>
+        const data = {
+          labels: ['Đạt','Không Đạt'],
+          datasets: [{
+            data: [73,27],
+            backgroundColor: [
+              'blue',
+              'green'
+            ],
+            hoverOffset: 1
+          }]
+        };
+    
+        const options = {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+
+            },
+            
+          },
+        };
+    
+        const myChart = new Chart(document.getElementById('myChart'), {
+            type: 'pie',
+          data: data,
+          options: options
+        });
+      </script>
+      
 </body>
 </html>
