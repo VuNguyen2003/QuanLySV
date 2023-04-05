@@ -343,29 +343,24 @@ body.dark .home .text{
     /* justify-content: end; */
     padding-top: 2.5%;
     flex-direction: column;
-    margin-left: 280px;
+    margin-left: 110px;
 }
 
-.wrapper .right-top{
+.wrapper .right{
     border-radius: 30px;
     width: 99%;
-    height: 320px;
+    height: auto;
     box-shadow: 0 1px 7px 0 var(--text-color-container);
     padding: 2%;
     margin-bottom: 1.5%;
     background-color: var(--sidebar-color);
 }
 
-.wrapper .right-bot{
-    border-radius: 30px;
-    width: 99%;
-    height: 320px;
-    box-shadow: 0 1px 7px 0 var(--text-color);
-    padding: 20px;
-    background-color: var(--sidebar-color);
+tr
+{
+    color: #ffffff;
 }
-
-table,tr, th, td{
+table, th, td{
     border: 2px solid var(--text-color);
     border-collapse: collapse;
     padding:1.5%;
@@ -378,11 +373,11 @@ table{
 }
 
 .txt{
-    color: var(--sidebar-color);
+    color: #FFF;
     padding:0.8%;
-    background-color: var(--primary-color);
+    background-color: #a6d0f0;
     border-radius: 10px;
-    display: inline;
+    width: 105px;
 }
 
 table tr:first-child {
