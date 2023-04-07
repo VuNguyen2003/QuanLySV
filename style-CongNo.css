@@ -364,7 +364,7 @@ body.dark .home .text{
     padding-top: 2%;
     flex-direction: column;
     margin-left: 25px;
-    background-color: white;
+    background-color: var(--sidebar-color);
     border-radius: 20px;
     margin-top: 2.9%;
     margin-right: 20px;
@@ -373,10 +373,11 @@ body.dark .home .text{
 }
 
 table,tr, th, td{
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     border-collapse: collapse;
     padding:1.5%;
     margin: 10px;
+    color: var(--text-color);
 }
 
 table{
@@ -385,5 +386,5 @@ table{
 }
 
 table tr:first-child {
-    background: #b1d8f6;
+    background: var(--primary-color);
 }
