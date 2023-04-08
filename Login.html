@@ -40,9 +40,14 @@
             <h2 class=" content">CỔNG THÔNG TIN NGƯỜI HỌC</h2>
             <h3 class="sub-content">ĐĂNG NHẬP HỆ THỐNG</h3>
             <form>
-                <input type="text" class="text" placeholder="Nhập mã sinh viên"><br>
-                <input type="text" class="text" placeholder="Nhập mật khẩu"><br>
-                
+                <div>
+                    <input id="name" type="text" class="text" placeholder="Nhập mã sinh viên"><br>
+                    <div class="error"></div>
+                </div>
+                <div>
+                    <input id="pass" type="text" class="text" placeholder="Nhập mật khẩu"><br>
+                    <div class="error"></div>
+                </div>
                 <div class="check">
                     <input type="checkbox" >
                     <label >Đã tốt nghiệp</label>
@@ -55,6 +60,14 @@
         </div>
     </div>
     <!-- Cục hình vuông đăng nhập  -->
-
+    <script src="./login.js"></script>
+    <script>
+        Check({
+            Rules:[
+                Check.isRequired('#name'),
+                Check.isRequired('#pass')
+            ]
+        });
+    </script>
 </body>
 </html>
