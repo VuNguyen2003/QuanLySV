@@ -15,6 +15,7 @@
     --primary-color-light: #ededed;
     --toggle-color: #a6d0f0;
     --text-color: #707070;
+    --text-color-container:black;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -41,6 +42,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --text-color-container:white;
 }
 
 /* ===== Sidebar ===== */
@@ -169,7 +171,6 @@ body.dark .sidebar header .toggle{
 .sidebar .menu{
     margin-top: 40px;
 }
-
 
 .sidebar li a{
     list-style: none;
@@ -339,5 +340,115 @@ body.dark .home .text{
 }
 
 /*code dưới này*/
-/* Ok em */
+.home{
+    min-height: 100vh;
+    height: auto;
+}
+.container{
+    color: var(--text-color-container);
+    margin:0 22px 22px 110px;
+    min-height: calc(100vh - 80px);
+    user-select: none;
+}
+/* Phần thông tin nổi bật------------------------------------------------------------------------ */
+.thong-tin-noi-bat{
+    position: relative;
+}
+/* Chữ thông tin nổi bật */
+.thong-tin-noi-bat h1{
+    font-size: 30px;
+}
+/* Mũi tên trái */
+.thong-tin-noi-bat .previous{
+    font-size: 40px;
+    position: absolute;
+    z-index: 10;
+    top:49%;
+    left: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: var(--text-color);
+}
 
+.thong-tin-noi-bat .previous i{
+    display: block;
+}
+/* Mũi tên phải */
+.thong-tin-noi-bat .next{
+    font-size: 40px;
+    position: absolute;
+    z-index: 10;
+    top:49%;
+    right: 0;
+    transform: translateX(50%);
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.thong-tin-noi-bat .next i{
+    display: block;
+}
+/* Thẻ div chứa các thông tin */
+.thong-tin-noi-bat .chua-thong-tin{
+    height: 220px;
+    padding: 12px 0;
+    overflow: hidden;
+}
+.thong-tin-noi-bat .chua-thong-tin .thong-tin{
+    display: flex;
+    height: 100%;
+    transition: all 0.25s linear;
+}
+/* Mỗi thông tin */
+.thong-tin-noi-bat .chua-thong-tin .thong-tin .item{
+    height: 100%;
+    background-color: var(--sidebar-color);
+    border-radius: 12px;
+    flex-shrink: 0;
+    flex-basis: 32%;
+    margin-right: 2%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tiêu đề, nội dung, xem chi tiết (thông tin chi tiết và thông báo) */
+.tieu-de{
+    font-size: 24px;
+    font-weight: 800;
+}
+.noi-dung{
+    flex-grow: 1;
+    overflow: hidden;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+}
+
+.chi-tiet{
+    text-align: right;
+}
+.chi-tiet a{
+    text-decoration: none;
+    color: rgb(35, 157, 233);
+}
+
+/* Thông báo ----------------------------------------------------------------------------- */
+.thong-bao h1{
+    font-size: 30px;
+}
+.chua-thong-bao{
+    display: flex;
+    flex-direction: column;
+}
+.chua-thong-bao .item-thong-bao{
+    height: 196px;
+    background-color: var(--sidebar-color);
+    margin: 12px 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
