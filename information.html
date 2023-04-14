@@ -1,0 +1,241 @@
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân</title>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style-inf.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Biểu dồ tròn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Dashboard Sidebar Menu</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/image/LOGO.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">HCMUE</span>
+                    <span class="fullName">Đại học Sư Phạm</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user-circle icon' ></i>
+                            <span class="text nav-text">Thông tin cá nhân</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="ThoiKhoaBieu.html">
+                            <i class='bx bx-time-five icon' ></i>
+                            <span class="text nav-text">Lịch học</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Lichthi.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Lịch thi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./learning-outcomes.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Kết quả</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="CongNo.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Công nợ</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="ThongBao.html">
+                            <i class='bx bx-receipt icon' ></i>
+                            <span class="text nav-text">Thông báo</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./ChuongTrinhHoc.html">
+                            <i class='bx bx-list-ul icon' ></i>
+                            <span class="text nav-text">Chương trình học</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                        
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <header>
+            <div class="left-content"><img src="image/menu.png"></div>
+            <div class="right-content">
+                <img class="avata" src="image/me.jpg">
+                <p>Nguyễn Lê Uy Vũ <br>47.01.104.242</p>
+                <div class="nav-link">
+                    <i class='bx bxs-bell bell' ></i>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="Noi_bat">
+                <h2 class="text">Nổi bật</h2>
+                <div class="hinh_vuong">
+                    <div class="hinh thu1">
+                        <h4>Kết quả học tập</h4>
+                        <div class="noi_dung">
+                            <canvas id="myChart" ></canvas>
+                        </div>
+                    </div>
+
+                    <div class="hinh thu2">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+
+                    <div class="hinh thu3">
+                        <h4>Lịch học hôm nay</h4>
+                        <div class="noi_dung">
+                            <div class="lich">
+                                <div class="phong">I102</div>
+                                <div class="mon">Mạng máy tính</div>
+                                <div class="time">7h20 -> 11h40</div>
+                                <!-- chỗ thêm icon -->
+                            </div>
+
+                            <div class="lich">
+                                <div class="phong">I102</div>
+                                <div class="mon">Mạng máy tính</div>
+                                <div class="time">7h20 -> 11h40</div>
+                                <!-- chỗ thêm icon -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Thong_tin">
+                <h2 class="text">Thông tin</h2>
+                <div class="hinh_vuong">
+                    <div class="ben_trai">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+
+                    <div class="ben_phai">
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                        <h4>Ngày sinh</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    
+    <script src="Responsive-DarkMode.js"></script>
+    <script src="Hide-Menu.js"></script>
+    <!-- Biểu đồ tròn -->
+    <script>
+        const data = {
+          labels: ['Đạt','Không Đạt'],
+          datasets: [{
+            data: [73,27],
+            backgroundColor: [
+              'blue',
+              'green'
+            ],
+            hoverOffset: 1
+          }]
+        };
+    
+        const options = {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+
+            },
+            
+          },
+        };
+    
+        const myChart = new Chart(document.getElementById('myChart'), {
+            type: 'pie',
+          data: data,
+          options: options
+        });
+      </script>
+      
+</body>
+</html>

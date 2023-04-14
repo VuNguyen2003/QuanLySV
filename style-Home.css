@@ -1,0 +1,583 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:20px;
+}
+/* hot line */
+.phone{
+    opacity: 0.5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    border:  3px solid gold;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: gold;
+    cursor: pointer;
+}
+.phone:hover{
+    opacity: 1;
+}
+/* căn giữa */
+.center-only1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* linear gardient từ trái sang phải */
+.gradient-text{
+    background: linear-gradient(to right,rgb(56, 21, 239),rgb(10, 152, 221));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+/* linear gardient từ trái trên sang phải dưới */
+.gradient-text2{
+    background: linear-gradient(to bottom right,rgb(0, 232, 255),rgb(56, 21, 239));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+/* Nền xanh chữ trắng (dùng ở phần dịch vụ)*/
+.blue-white{
+    background-color: rgb(21, 95, 240);
+    color: white;
+}
+/* linear gardient border (dùng ở phần dịch vụ) */
+.blue-text-border{
+    color: rgb(56, 21, 239);
+    border: 4px solid;
+    border-image-source: linear-gradient(to bottom right,rgb(0, 232, 255),rgb(56, 21, 239));
+    border-image-slice: 1;
+}
+/* Tiêu đề dịch vụ, tin tức , liên hệ */
+.tieu-de{
+    height: 80px;
+    display: flex;
+}
+/* Tiêu đề dịch vụ, tin tức , liên hệ */
+.text-tieu-de{
+    margin: auto;
+    height: auto;
+    font-weight: 1000;
+    font-size: 40px;
+    position: relative;
+}
+/* Gạch chân dưới tiêu đề */
+.text-tieu-de::after{
+    content: "";
+    width: 10vw;
+    height: 4px;
+    background: linear-gradient(to right,rgb(56, 21, 239),rgb(10, 152, 221));
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+/* Phần giới thiệu ----------------------------------------------------------------------------------------------*/
+.gioi-Thieu{
+    height: 100vh;
+    background-image: linear-gradient(to top right,rgb(57, 179, 240),rgb(56, 21, 239));
+}
+/*chia flex cho log + ten trng*/
+.logoaName{
+    display: flex;
+    flex-direction: row;
+}
+/* lo trường + home bảng tin đang nhập icon phone */
+.gioi-Thieu nav{
+    height: 68px;
+    display: flex;
+}
+/* logo trường*/
+.gioi-Thieu nav .logo{
+    padding: 4px;
+}
+/* home bảng tin đang nhập icon phone */
+.gioi-Thieu nav .nav{
+    flex: 1;
+    text-align: right;
+    height: 90%;
+}
+/* home bảng tin đang nhập icon phone */
+.gioi-Thieu nav .nav ul{
+    height: 100%;
+}
+/* home bảng tin đang nhập icon phone */
+.gioi-Thieu nav .nav li {
+    display: inline-block;
+    height: 100%;
+    margin-left: -5px;
+}
+/* home bảng tin đang nhập icon phone */
+.gioi-Thieu nav .nav li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px 30px 0;
+    
+    height: 100%;
+}
+/* icon phone */
+.gioi-Thieu .nav ul li:last-child a{
+    padding-right: 20px;
+}
+/* icon 3 gạch */
+.gioi-Thieu nav .nav > i{
+    display: none;
+}
+/* tên trường, địa chỉ */
+.gioi-Thieu nav .ten-Truong{
+    padding-top:4px ;
+    color: white;
+}
+/* tên trường */
+.gioi-Thieu nav .ten-Truong h3{
+    font-weight: 100;
+    font-size: 24px;
+    border-bottom: solid white 3px;
+    padding-bottom: 4px;
+}
+/* địa chỉ */
+.gioi-Thieu nav .ten-Truong p{
+    font-size: 16px;
+    padding-top: 4px;
+    /* margin-left: -16px; */
+}
+.gioi-Thieu section{
+    height: calc(100% - 68px);
+    display: flex;
+    padding: 30px;
+}
+/* Phần online hcmue + button */
+.gioi-Thieu section .text{
+    flex: 4;
+    color: white;
+}
+/* Phần image */
+.gioi-Thieu section .image{
+    flex: 7;
+}
+/* Phần online hcmue + button */
+.gioi-Thieu .text1{
+    text-align: center;
+    line-height: 1.5;
+}
+/* Phần online hcmue */
+.gioi-Thieu .text1 h1{
+    font-size: 50px;
+}
+/* Phần chữ đại học ... chất lượng ... */
+.gioi-Thieu .text1 p{
+    font-size: 24px;
+}
+/* Phần gạch dưới Đại học Sư Phạm Thành Phố Hồ Chí Minh */
+.gioi-Thieu .text1 p:nth-child(2){
+    border-bottom: 3px white solid;
+    padding: 0 60px;
+}
+/* button bắt đầu */
+.gioi-Thieu .text1 button{
+    margin-top: 30px;
+    padding: 8px 50px;
+    border-radius: 15px;
+    background-color: rgb(56, 21, 239);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* hình ảnh */
+.gioi-Thieu section .image img{
+    border-radius: 20px;
+}
+
+/* Phần dịch vụ -------------------------------------------------------------------------------------------------- */
+.dich-Vu{
+    height: 100vh;
+    background-color: rgb(238,238,238);
+}
+.dich-Vu section{
+    height: calc(100% - 80px);        /*Trừ 80px do phần tiêu dề có height = 80px */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+/* Mỗi dịch vụ */
+.dich-Vu section .item{
+    height: 250px;
+    width: 28%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+/* icon */
+.dich-Vu .item i{
+    margin-top: 16px;
+    font-size: 150px;
+}
+/* Chữ nằm dưới icon */
+.dich-Vu .item p{
+    margin-top: 30px;
+    font-size: 22px;
+}
+/* Phần tin tức fanpage ------------------------------------------------------------------------------------------------ */
+.tin-Tuc{
+    height: 100vh;
+    background-color: rgb(21, 95, 240);
+    color: white;
+}
+/* Đổi màu phần gạch chân dưới tiêu đề */
+.tin-Tuc .text-tieu-de::after{
+    background-color: white;
+    background-image: none;
+}
+.tin-Tuc section{
+    display: flex;
+    height: calc(100% - 80px);
+}
+/* Phần hướng dẫn học tập, nội quy */
+.tin-Tuc section .video{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: flex-start;
+    padding-left:30px ;
+}
+/* Phần fanpage */
+.tin-Tuc section .tin-fanpage{
+    flex: 2;
+    padding: 30px;
+    position: relative;
+}
+/* Hình ảnh fanpage */
+.tin-Tuc section .tin-fanpage .image-fanpage{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    border: white solid 20px;
+    border-radius: 30px;
+}
+/* Ô vuông trắng */
+.tin-Tuc section .video .item-video{
+    margin: 30px 10px 5px;
+    width: 170px;
+    height: 170px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(21, 95, 240);
+}
+/* Phần text trong ô vuông trắng */
+.tin-Tuc .item-video p{
+    font-size: 25px;
+}
+/* Phần liên hệ --------------------------------------------------------------------------------------- */
+.lien-He{
+    height: 80vh;
+    color: rgb(21, 95, 240);
+    background-color: rgb(238,238,238);
+}
+.lien-He section{
+    padding: 30px 80px;
+    height: 450px;
+    display: flex;
+}
+/* Bảng đồ */
+.lien-He section .map{
+    border: rgb(21, 95, 240) solid 4px;
+    height: 100%;
+    flex: 1;
+}
+/* Thông tin liên hệ(sdt,email,fanpage) */
+.lien-He section .thong-tin-lien-he{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Từng thông tin */
+.lien-He section .thong-tin-lien-he div{
+    width: 100%;
+    height: 100px;
+    padding-left: 10%;
+}
+/* Thông tin liên hệ(text) */
+.lien-He section .thong-tin-lien-he div p{
+    position: relative;
+    width: 100%;
+    padding-left: 40px;
+}
+/* Thông tin liên hệ(icon) */
+.lien-He section .thong-tin-lien-he div i{
+    font-size: 30px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+/* Phần footer ------------------------------------------------------------------------------------------------------ */
+footer{
+    height: 20vh;
+    background-color: rgb(21, 95, 240);
+    position: relative;
+}
+/* Phàn chữ trong footer */
+footer .text-in-footer{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+/* @media screen and (min-width: 1431) and (max-width: 1660px) {
+
+}
+@media screen and (min-width: 1331) and (max-width: 1430px) {
+    
+}
+
+@media screen and (min-width: 1231) and (max-width: 1330px) {
+    
+}
+
+@media screen and (min-width: 1181) and (max-width: 1230px) {
+    
+}
+
+@media screen and (min-width: 1046) and (max-width: 1180px) {
+    
+}
+
+@media screen and (min-width: 951) and (max-width: 1045px) {
+    
+}
+
+@media screen and (min-width: 816) and (max-width: 950px) {
+    
+} */
+@media screen and (min-width:816px){
+    .gioi-Thieu nav .nav ul{
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 815px) {
+    /* Phần giới thiệu ----------------------------------------------------------------------------------------------*/
+    .gioi-Thieu{
+        width: auto;
+        height: auto;
+    }
+    .gioi-Thieu nav .nav li a{
+        padding: 0.4em 1em 0;
+    }
+    .image img{
+        width: 80%;
+    }
+    .gioi-Thieu section{
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 1.5em 0;
+    }
+    .gioi-Thieu nav .nav ul{
+        display: block !important;
+    }
+    /* Phần tin tức fanpage ------------------------------------------------------------------------------------------------ */
+    .tin-Tuc{
+        height: auto;
+    }
+    .tin-Tuc section{
+        height: auto;
+        display: block;
+    }
+    /* Phần hướng dẫn học tập, nội quy */
+    .tin-Tuc section .video{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-content: flex-start;
+        padding: 0;
+    }
+    /* Ô vuông trắng */
+    .tin-Tuc section .video .item-video{
+        margin: 1.5em 0.5em 0.25em;
+        width: 10em;
+        height: 10em;
+        padding: 1em;
+        background-color: white;
+        border-radius: 1.5em;
+        text-align: center;
+        color: rgb(21, 95, 240);
+    }
+    /* Phần fanpage */
+    .tin-Tuc section .tin-fanpage{
+        padding: 1.5em 0;
+    }
+    /* Hình ảnh fanpage */
+    .tin-Tuc section .tin-fanpage .image-fanpage{
+        position: relative;
+    }
+
+    /* Phần liên hệ --------------------------------------------------------------------------------------- */
+    .lien-He{
+        height: auto;
+        width: auto;
+    }
+    .lien-He section{
+        height: auto;
+        display: block;
+    }
+    /* Từng thông tin */
+    .lien-He section .thong-tin-lien-he div{
+        width: 100%;
+        height: 2.5em;
+        padding-left: 0;
+    }
+    .lien-He section .map{
+        border: rgb(21, 95, 240) solid 4px;
+        height: 20em;
+    }
+    /* Phần footer ------------------------------------------------------------------------------------------------------ */
+    .footer{
+        height: auto;
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width:739px){
+    /* Phần giới thiệu ----------------------------------------------------------------------------------------------*/
+    .gioi-Thieu{
+        width: auto;
+        height: auto;
+    }
+    .gioi-Thieu nav .nav{
+        height: fit-content;
+        position: relative;
+    }    
+    .gioi-Thieu nav .nav ul{
+        height: auto;
+        width: 6em;
+        background-color: rgb(238,238,238);
+        display: none;
+        position: absolute;
+        right: 0;
+    }
+    .gioi-Thieu nav .nav li{
+        display: block;
+        height: fit-content;
+        margin: 0;
+    }
+    .gioi-Thieu nav .nav li a{
+        padding: 0.5em 0.4em;
+        color: rgb(21, 95, 240);
+        display: block;
+        text-align: center;
+    }
+    .gioi-Thieu nav .nav li:last-child{
+        display: none;
+    }
+    .gioi-Thieu nav .nav > i{
+        color: rgb(238,238,238);
+        display: block;
+        padding: 0.5em;
+        cursor: pointer;
+        height: fit-content;
+    }
+    .image img{
+        width: 80%;
+    }
+    .gioi-Thieu section{
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 1.5em 0;
+    }
+    /* Phần dịch vụ----------------------------------------------------------------------- */
+    .dich-Vu{
+        height: auto;
+    }
+    .dich-Vu section{
+        flex-direction: column;
+    }
+
+    .dich-Vu section .item{
+        width: 90%;
+    }
+    /* Phần tin tức-------------------------------------------------------------------------------------------- */
+    .tin-Tuc{
+        height: auto;
+    }
+    .tin-Tuc section{
+        height: auto;
+        display: block;
+    }
+    .tin-Tuc .tieu-de p{
+        text-align: center;
+    }
+    /* Phần hướng dẫn học tập, nội quy */
+    .tin-Tuc section .video{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-content: flex-start;
+        padding: 0;
+    }
+    /* Ô vuông trắng */
+    .tin-Tuc section .video .item-video{
+        margin: 1.5em 0.5em 0.25em;
+        width: 10em;
+        height: 10em;
+        padding: 1em;
+        background-color: white;
+        border-radius: 1.5em;
+        text-align: center;
+        color: rgb(21, 95, 240);
+    }
+    /* Phần fanpage */
+    .tin-Tuc section .tin-fanpage{
+        padding: 1.5em 0;
+    }
+    /* Hình ảnh fanpage */
+    .tin-Tuc section .tin-fanpage .image-fanpage{
+        position: relative;
+    }
+    /* Phần liên hệ --------------------------------------------------------------------------------------- */
+    .lien-He{
+        height: auto;
+        width: auto;
+    }
+    .lien-He section{
+        height: auto;
+        display: block;
+        padding: 1.5em;
+    }
+    /* Từng thông tin */
+    .lien-He section .thong-tin-lien-he div{
+        width: 100%;
+        height: 2.5em;
+        padding-left: 0;
+    }
+    .lien-He section .map{
+        border: rgb(21, 95, 240) solid 4px;
+        height: 15em;
+    }
+    
+    /* Phần footer ------------------------------------------------------------------------------------------------------ */
+    .footer{
+        height: auto;
+        display: block;
+        padding: 1.5em 1em;
+    }
+    footer .text-in-footer p{
+        font-size: 0.8em;
+    }
+}
+
+

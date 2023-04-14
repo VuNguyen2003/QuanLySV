@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+/* ----------heading------------- */
+
+/* Ném logo vs chữ vào giữa màn hình theo chìu dọc  */
+.heading{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+    color: #155ff0;
+}
+
+
+/* Chỉnh phần chũ Đại học sư phạm cho giống thiết kế của Vũ */
+.heading .content{
+    display: inline-block;
+    font-size: 29px;
+    padding-bottom: 5px;
+    padding-right: 4.5rem;
+    margin-left: 30px;
+    font-weight: 100;
+    border-bottom: 3px solid #155ff0;
+}
+
+/* CHo phần chữ ở dưới Đại học sư phạm cách xuống 5px */
+.heading .sub-content{
+    padding-top: 5px;
+}
+
+/* ----------menu------------- */
+
+/* chiều dọc và màu của thanh menu */
+.menu{
+    height: 46px;
+    background-color: #0a98dd;
+}
+
+/* Canh đều các item trong menu ra */
+.menu .list{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+/* chỉnh lại font chữ  item của menu */
+.menu .list .item a{
+    font-size: 20px;
+    text-decoration: none;
+    color:white;
+}
+
+/* ----------main------------- */
+
+/* chỉnh kích thước và ném nó vào giữa */
+/* Nó ở đây là nguyên hình vuông bự đăng nhập ở dưới */
+.main{
+    width :400px;
+    margin: 30px auto;
+    height: 400px;
+}
+
+/* main.up là hình vuông bự ở dưới trừ phần Quên mật khẩu */
+/* dùng flex để ném vào giữa cái item bên trong */
+/* Các item bên trong gồm 2 dòng chữ Cổng thông tin với Đăng nhập, 2 ô nhập ,checkbox*/
+.main .up{
+    height: 100%;
+    background: url("./image/h.jpg") top center /cover no-repeat;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3815ef;
+}
+
+/* chỉnh chữ Cổng thông tin */
+.main .up .content{
+    width: 60%;
+    text-align: center;
+    padding: 10px 0px;
+    color:white;
+    
+}
+
+/* chỉnh chữ đăng nhập */
+.main .up .sub-content{
+   padding-bottom: 20px; 
+   color:white;
+}
+
+/* from ở đây bao gồm 2 cái nhập và cái checkbox */
+/* cho cái div của nó chỉ bằng 90% cái div ô vuông main.up */
+.main form{
+    width: 90%;
+}
+
+/* 
+chỉnh 2 cái nhập và check box*/
+/* xin lỗi đồng chí sách */
+.main input{
+    height:40px;
+    border: white;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+/* vì có 2 dạng input
+1 là dùng nhập
+2 là cái check box */
+
+/* chỉnh 2 cái nhập */ 
+.main form .text{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+/* chỉnh cái checkbox */
+.main form .check{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color:white;
+    margin-top: 5px;
+}
+
+/* chỉnh nút đăng nhập */
+.main button{
+    width: 100%;
+    background-color: rgb(250, 89, 2);
+    height: 70px;
+    color: white;
+    border: none;
+}
+
+/* chỉnh chữ Quên mật khẩu  */
+.main .down{
+    margin-top: 10px;
+    color: #0a98dd;
+    text-align: end;
+}
+
+/* gadient text */
+.gradient-text{
+    background: linear-gradient(to right,rgb(56, 21, 239),rgb(10, 152, 221));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+@media screen and (min-width: 426) and (max-width: 769px) {
+    .main form{
+        width: 50%;
+    }
+    .menu .list .item a{
+        font-size: 10px;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .main .up .content{
+        width: 30%;
+        
+    }
+
+    .heading .content{
+        
+        font-size:5%;
+        padding-bottom: 2px;
+        padding-right: 4.5rem;
+        margin-left: 15px;
+        font-weight: 50;
+    }
+}
+@media screen and (max-width: 425px) {
+    
+    .menu .list .item a{
+        font-size: 15px;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .main .up .content{
+        width: 60%;
+        text-align: center;
+        padding: 10px 0px;
+        color:white;
+        height: auto;
+    }
+
+    .heading .content{
+        font-size: 20px;
+        padding-bottom: 2px;
+        padding-right: 2rem;
+        margin-left: 15px;
+        font-weight: 50;
+    }
+    .heading .sub-content{
+        font-size: 10px;
+    }
+    .main{
+        width: 90%;
+        height: 115%;
+    }
+}
+
+.error{
+    height: 20px;
+    color: red;
+    font-weight: bold;
+    text-align: right;
+}

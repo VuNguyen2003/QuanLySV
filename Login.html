@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style-DangNhap.css">
+    <link rel="stylesheet" href="/icon/themify-icons/themify-icons.css">
+</head>
+<body>
+    <!-- kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
+    <!-- Phần logo vs chữ kế bên logo -->
+    <div class="heading">
+        <div class="logo">
+            <img src="./image/LOGO.png" alt="">
+        </div>
+        <div class="gradient-text text">
+            <h2 class=" content">Đại học Sư Phạm</h2>
+            <p class="sub-content">Số 280 An Dương Vương, Phường 4, Quận 5</p>
+        </div>
+    </div>
+    <!-- Phần logo vs chữ kế bên logo -->
+
+
+    <!-- Phần menu màu xanh  -->
+    <div class="menu">
+        <ul class="list">
+            <li class="item"><a href="./Home.html">HOME</a></li>
+            <li class="item"><a href="">Thông báo</a></li>
+            <li class="item"><a href="">Học vụ</a></li>
+            <li class="item"><a href="">Hướng dẫn</a></li>
+        </ul>
+    </div>
+    <!-- Phần menu màu xanh  -->
+
+    <!-- Cục hình vuông đăng nhập  -->
+    <div class="main">
+        <div class="up">
+            <h2 class=" content">CỔNG THÔNG TIN NGƯỜI HỌC</h2>
+            <h3 class="sub-content">ĐĂNG NHẬP HỆ THỐNG</h3>
+            <form>
+                <div>
+                    <input id="name" type="text" class="text" placeholder="Nhập mã sinh viên"><br>
+                    <div class="error"></div>
+                </div>
+                <div>
+                    <input id="pass" type="text" class="text" placeholder="Nhập mật khẩu"><br>
+                    <div class="error"></div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" >
+                    <label >Đã tốt nghiệp</label>
+                </div>
+                <button type="button" onclick="location.href='./information.html'">ĐĂNG NHẬP</button>
+            </form>
+        </div>
+        <div class="down">
+            <p>Quên mật khẩu</p>
+        </div>
+    </div>
+    <!-- Cục hình vuông đăng nhập  -->
+    <script src="./login.js"></script>
+    <script>
+        Check({
+            Rules:[
+                Check.isRequired('#name'),
+                Check.isRequired('#pass')
+            ]
+        });
+    </script>
+</body>
+</html>
