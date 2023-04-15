@@ -237,31 +237,29 @@
 }
 /* Phần hướng dẫn học tập, nội quy */
 .tin-Tuc section .video{
-    flex: 3;
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content:space-between;
     align-content: flex-start;
-    padding-left:30px ;
+    padding-top: 20px;
+    padding-left:20px;
 }
 /* Phần fanpage */
-.tin-Tuc section .tin-fanpage{
-    flex: 2;
-    padding: 30px;
-    position: relative;
+.tin-Tuc section .container-fanpage{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 /* Hình ảnh fanpage */
-.tin-Tuc section .tin-fanpage .image-fanpage{
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    border: white solid 20px;
-    border-radius: 30px;
+.tin-Tuc section .container-fanpage .fanpage{
+    height: 100%;
+    background-color: blueviolet;
 }
 /* Ô vuông trắng */
 .tin-Tuc section .video .item-video{
-    margin: 30px 10px 5px;
-    width: 170px;
+    width: 23%;
     height: 170px;
     padding: 20px;
     background-color: white;
@@ -416,11 +414,11 @@ footer .text-in-footer{
         color: rgb(21, 95, 240);
     }
     /* Phần fanpage */
-    .tin-Tuc section .tin-fanpage{
+    .tin-Tuc section .container-fanpage{
         padding: 1.5em 0;
     }
     /* Hình ảnh fanpage */
-    .tin-Tuc section .tin-fanpage .image-fanpage{
+    .tin-Tuc section .container-fanpage .fanpage{
         position: relative;
     }
 
@@ -541,11 +539,11 @@ footer .text-in-footer{
         color: rgb(21, 95, 240);
     }
     /* Phần fanpage */
-    .tin-Tuc section .tin-fanpage{
+    .tin-Tuc section .container-fanpage{
         padding: 1.5em 0;
     }
     /* Hình ảnh fanpage */
-    .tin-Tuc section .tin-fanpage .image-fanpage{
+    .tin-Tuc section .container-fanpage .fanpage{
         position: relative;
     }
     /* Phần liên hệ --------------------------------------------------------------------------------------- */

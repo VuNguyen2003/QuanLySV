@@ -390,7 +390,7 @@ body.dark .home .text{
 }
 /* Thẻ div chứa các thông tin */
 .thong-tin-noi-bat .chua-thong-tin{
-    height: 220px;
+    height: 270px;
     padding: 12px 0;
     overflow: hidden;
 }
@@ -407,7 +407,7 @@ body.dark .home .text{
     flex-shrink: 0;
     flex-basis: 32%;
     margin-right: 2%;
-    padding: 4px;
+    padding: 4px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -422,20 +422,23 @@ body.dark .home .text{
     overflow: hidden;
     line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     text-align: justify;
 }
 
 .chi-tiet{
     text-align: right;
-}
-.chi-tiet a{
-    text-decoration: none;
     color: rgb(35, 157, 233);
+}
+.chi-tiet span{
+    cursor: pointer;
 }
 
 /* Thông báo ----------------------------------------------------------------------------- */
+.thong-bao{
+    padding-top: 20px;
+}
 .thong-bao h1{
     font-size: 30px;
 }
@@ -444,14 +447,51 @@ body.dark .home .text{
     flex-direction: column;
 }
 .chua-thong-bao .item-thong-bao{
-    height: 196px;
+    height: 246px;
     background-color: var(--sidebar-color);
     margin: 12px 0;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    padding: 4px;
+    padding: 4px 20px;
 }
 .item{
     height: 50px;
+}
+
+/* sub-container----------------------------------------------------------- */
+.background-sub-container{
+    z-index: 101;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.sub-container{
+    width: 60%;
+    height: 600px;
+    background-color: var(--sidebar-color);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: auto;
+    border-radius: 15px;
+    color: var(--text-color-container);
+}
+.sub-container .close-sub-container{
+    text-align: right;
+    font-size: 40px;
+}
+.sub-container .close-sub-container i {
+    display: block;
+    cursor: pointer;
+}.open-sub-container{
+    display: block;
+}
+.noi-dung-sub-container{
+    padding: 10px 20px;
 }

@@ -347,21 +347,20 @@ body.dark .home .text{
 .container{
     background-color: var(--sidebar-color);
     color: var(--text-color-container);
-    margin:0 22px 22px 110px;
+    margin:22px 22px 22px 110px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     min-height: calc(100vh - 80px);
 }
 .header{
     display: flex;
-    height: 50px;
+    height: 60px;
     position: relative;
     align-items: center;
 }
 .header > div{
     display: flex;
     margin-left: 50px;
-    
 }
 .header>div h3:last-child{
     margin-left: 20px;

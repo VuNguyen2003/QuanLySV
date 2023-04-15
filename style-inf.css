@@ -341,13 +341,18 @@ body.dark .home .text{
 /*code dưới này*/
 /* Ok em */
 
+
+.home{
+    min-height: 100vh;
+    height: auto;
+}
 /* siber postion fixed nên đẩy qua phải 78px của siber cộng với 22 px mà Vũ nói */
 .content{
     height: 100%;
    margin-top: 15px;
-   margin-left: 100px;
-   margin-right: 15px;
-
+   margin-left: 110px;
+   margin-right: 22px;
+    margin-bottom: 22px;
 }
 
 /* Chữ Nổi bật vs THông tin */

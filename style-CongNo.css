@@ -358,16 +358,21 @@ body.dark .home .text{
 }
 
 /*code dưới này*/
+.sidebar.close ~ .home {
+    height: auto;
+    min-height: 100vh;
+    left: 88px;
+    width: calc(100% - 88px);
+}
 
 .wrapper{
     display:flex;
     padding-top: 2%;
     flex-direction: column;
-    margin-left: 25px;
     background-color: var(--sidebar-color);
-    border-radius: 20px;
+    border-radius: 15px;
     margin-top: 2.9%;
-    margin-right: 20px;
+    margin:22px;
     min-height: 650px;
     padding-left: 20px;
 }

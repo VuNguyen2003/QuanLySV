@@ -359,25 +359,33 @@ body.dark .home .text{
 
 
 /*code dưới này*/
-
+.sidebar.close ~ .home {
+    
+    left: 88px;
+    width: calc(100% - 88px);
+    height: auto;
+    min-height: 100vh;
+}
 /* Lịch thi */
 
 .wrapper{
     display:flex;
-    padding-top: 2%;
     flex-direction: column;
-    margin-left: 25px;
+    margin-left: 22px;
     background-color: var(--sidebar-color);
-    border-radius: 20px;
-    margin-top: 2.9%;
-    margin-right: 20px;
+    border-radius: 15px;
+    margin-top: 22px;
+    margin-right: 22px;
     min-height: 650px;
     padding-left: 20px;
+    margin-bottom: 22px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 .header{
     display: flex;
-    height: 50px;
+    height: 60px;
     position: relative;
     align-items: center;
 }
@@ -404,8 +412,9 @@ table,tr, th, td{
 }
 
 table{
-    width: 97%;
+    width: 100%;
     text-align: center;
+    margin: 0;
 }
 
 table tr:first-child {

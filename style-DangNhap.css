@@ -139,6 +139,7 @@ chỉnh 2 cái nhập và check box*/
     height: 70px;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 /* chỉnh chữ Quên mật khẩu  */
