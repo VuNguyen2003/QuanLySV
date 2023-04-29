@@ -1,3 +1,5 @@
+
+
 <!-- Coding by CodingLab | www.codinglabweb.com -->
 <!DOCTYPE html>
 <html lang="en">
@@ -126,80 +128,61 @@
             <div class = "header">
                 <div class="namhoc">
                     <h3>Năm học</h3>
-                    <h3>2023</h3>
+                    <select id="year" class="combobox">
+                        <option value="0" >0</option>
+                        <option value="2022">2022</option>
+                        <option value="2023" selected >2023</option>
+                    </select>
                 </div>
                 <div class="hocky">
                     <h3>Học kỳ</h3>
-                    <h3>2023</h3>
+                    <select id="hoc_ki" class="combobox">
+                        <option value="1" >1</option>
+                        <option value="2" selected>2</option>
+                    </select>
                 </div>
                 <div class="tuan">
                     <h3>Tuần</h3>
-                    <h3>2023</h3>
+                    <select id="tuan"  class="combobox" onChange="onChange()">
+                        <option value="0" selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" >3</option>
+                        <option value="4">4</option>
+                        <option value="5" >5</option>
+                        <option value="6">6</option>
+                        <option value="7" >7</option>
+                        <option value="8">8</option>
+                        <option value="9" >9</option>
+                        <option value="10">10</option>
+                        <option value="11" >11</option>
+                        <option value="12">12</option>
+                        <option value="13" >13</option>
+                        <option value="14">14</option>
+                    </select>
                 </div>
             </div>
             <div class="bang">
                 <table>
                     <thead>
-                        <th>Phòng</th>
                         <th>Thứ 2</th>
                         <th>Thứ 3</th>
                         <th>Thứ 4</th>
                         <th>Thứ 5</th>
                         <th>Thứ 6</th>
                         <th>Thứ 7</th>
-                        <th>Chủ nhật</th>
+                      
                     </thead>
                     <tbody>
                         <tr>
-                            <th class = "phong"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td id="T2"></td>
+                            <td id="T3"></td>
+                            <td id="T4"></td>
+                            <td id="T5"></td>
+                            <td id="T6"></td>
+                            <td id="T7"></td>
                         </tr>
-                        <tr>
-                            <th class = "phong"></th>
-                            <td>đfdf dsfaf adasd sdsadsa sadasdas sdsadsada asdasdsad sadasdasd asdasdasd ádsa</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th class = "phong"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th class = "phong"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th class = "phong"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -208,5 +191,50 @@
 
     <script src="Responsive-DarkMode.js"></script>
     <script src="Hide-Menu.js"></script>
+    <script>
+        const onChange=()=>{
+            document.querySelector('#T2').innerHTML = "";
+            document.querySelector('#T3').innerHTML = "";
+            document.querySelector('#T4').innerHTML = "";
+            document.querySelector('#T5').innerHTML = "";
+            document.querySelector('#T6').innerHTML = "";
+            document.querySelector('#T7').innerHTML = "";
+            const Svalue_hk= document.querySelector("#hoc_ki").value;
+            const Svalue_year =document.querySelector('#year').value;
+            const Svalue_tuan=document.querySelector('#tuan').value;
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    const string=this.responseText;
+                    const va=string.split(' ');
+                    for(let x of va){
+                        if(x[0]=='2'){
+                            document.querySelector('#T2').innerHTML = x.slice(1);
+                        }
+                        if(x[0]=='3'){
+                            document.querySelector('#T3').innerHTML = x.slice(1);
+                        }
+                        if(x[0]=='4'){
+                            document.querySelector('#T4').innerHTML = x.slice(1);
+                        }
+                        if(x[0]=='5'){
+                            document.querySelector('#T5').innerHTML = x.slice(1);
+                        }
+                        if(x[0]=='6'){
+                            document.querySelector('#T6').innerHTML = x.slice(1);
+                        }
+                        if(x[0]=='7'){
+                            document.querySelector('#T7').innerHTML = x.slice(1);
+                        }
+                    }
+                }
+            };
+            xhr.open("POST","ThoiKhoaBieu_2.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("tuan=" + Svalue_tuan +"&year=" + Svalue_year + "&hoc_ki=" + Svalue_hk );
+        }
+        onChange();
+    </script>
 </body>
 </html>

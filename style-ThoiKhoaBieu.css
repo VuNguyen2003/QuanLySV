@@ -387,12 +387,6 @@ th,td,tr{
 td{
     padding: 4px;
 }
-.bang table tbody .phong{
-    height: 100px;
-    background-color: var(--body-color);
-}
-.bang table thead th:first-child{
-    background-color: var(--body-color);
-}
+
 
 
