@@ -1,3 +1,30 @@
+<?php
+
+    $_SESSION['Ma_GV']='CNTT.01';
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database ="qlsinhvien";
+
+    $conn = new mysqli($servername, $username, $password,$database);
+    $sql="SELECT SV.HoTen,SV.MSSV,GV.MaGV
+        FROM giangvien GV, sinhvien SV
+        WHERE GV.MaLop = SV.MaLop AND GV.MaGV = '".$_SESSION['Ma_GV']."'";
+    $result=$conn->query($sql);
+    $name=array();
+    $mssv=array();
+    if($result->num_rows>0){
+        while($row=$result->fetch_assoc()){
+            $name[]=$row['HoTen'];
+            $mssv[]=$row['MSSV'];
+        }
+    }
+
+    $name_mssv = array_combine($name, $mssv);
+    $conn->close();
+?>
+
 
 
 <!-- Coding by CodingLab | www.codinglabweb.com -->
@@ -9,11 +36,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang cá nhân</title>
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="style-inf.css">
-    <link rel="stylesheet" href="style-ThoiKhoaBieu.css">
+    <link rel="stylesheet" href="danhSachSv_GV_3.css">
+    
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <title>Dashboard Sidebar Menu</title> 
 </head>
 <body>
@@ -38,55 +65,47 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="./information.html">
+                        <a href="information_GV.html">
                             <i class='bx bx-user-circle icon' ></i>
                             <span class="text nav-text">Thông tin cá nhân</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="ThoiKhoaBieu.html">
+                        <a href="ThoiKhoaBieu_GV.html">
                             <i class='bx bx-time-five icon' ></i>
-                            <span class="text nav-text">Lịch học</span>
+                            <span class="text nav-text">Lịch dạy học</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="Lichthi.html">
+                        <a href="#">
                             <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Lịch thi</span>
+                            <span class="text nav-text">Lịch gác thi</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="./learning-outcomes.html">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">Kết quả</span>
+                        <a href="hoc_phan_GV.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">lớp học phần</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="CongNo.html">
-                            <i class='bx bx-wallet icon' ></i>
-                            <span class="text nav-text">Công nợ</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="ThongBao.html">
+                        <a href="ThongBao_GV.html">
                             <i class='bx bx-receipt icon' ></i>
                             <span class="text nav-text">Thông báo</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="ChuongTrinhHoc.html">
+                        <a href="danhSachSv_GV.html">
                             <i class='bx bx-list-ul icon' ></i>
-                            <span class="text nav-text">Chương trình học</span>
+                            <span class="text nav-text">Lớp cố vấn</span>
                         </a>
                     </li>
                 </ul>
             </div>
-
             <div class="bottom-content">
                 <li class="">
                     <a href="#">
@@ -104,11 +123,13 @@
 
                     <div class="toggle-switch">
                         <span class="switch"></span>
+                        
                     </div>
                 </li>
                 
             </div>
-        </div>
+
+            
 
     </nav>
 
@@ -124,7 +145,24 @@
 
             </div>
         </header>
-        <div class = 'container'>
+        
+        
+        <div class="container">
+            <table>
+            
+                <thead>
+                    <th>Tên SV</th> 
+                    <th>Mã số SV</th>
+                    <th>Kết quả học tập</th>
+                    <th class="tkb">Thời khóa biểu</th>
+                </thead>
+                <tbody id="table">
+                   
+                </tbody>
+            </table>
+        </div>
+        <div class="container-sub">
+            <div class="butoon">x</div>
             <div class = "header">
                 <div class="namhoc">
                     <h3>Năm học</h3>
@@ -143,7 +181,7 @@
                 </div>
                 <div class="tuan">
                     <h3>Tuần</h3>
-                    <select id="tuan"  class="combobox" onChange="onChange()">
+                    <select id="tuan"  class="combobox" onChange='onChange()'>
                         <option value="0" selected></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -162,8 +200,7 @@
                     </select>
                 </div>
             </div>
-            <div class="bang">
-                <table>
+            <table>
                     <thead>
                         <th>Thứ 2</th>
                         <th>Thứ 3</th>
@@ -185,13 +222,22 @@
                         
                     </tbody>
                 </table>
-            </div>
         </div>
+        
+                   
+
+        
+        
     </section>
 
-    <script src="Responsive-DarkMode.js"></script>
-    <script src="Hide-Menu.js"></script>
-    <script>
+
+    <script>    
+        document.querySelector('#table').innerHTML ="<?php 
+            foreach($name_mssv as $key => $value){
+                echo "<tr> <td>".$key."</td> <td>".$value."</td>  <td>Diem</td> <td><button class='butoon'  data-mssv='".$value."'>Xem chi tiết</button></td></tr>";
+            }
+        ?>";
+        
         const onChange=()=>{
             document.querySelector('#T2').innerHTML = "";
             document.querySelector('#T3').innerHTML = "";
@@ -199,6 +245,7 @@
             document.querySelector('#T5').innerHTML = "";
             document.querySelector('#T6').innerHTML = "";
             document.querySelector('#T7').innerHTML = "";
+            
             const Svalue_hk= document.querySelector("#hoc_ki").value;
             const Svalue_year =document.querySelector('#year').value;
             const Svalue_tuan=document.querySelector('#tuan').value;
@@ -210,31 +257,38 @@
                     const va=string.split('.');
                     for(let x of va){
                         if(x[0]=='2'){
-                            document.querySelector('#T2').innerHTML = x.slice(1);
+                            document.querySelector('#T2').innerText = x.slice(1);
                         }
                         if(x[0]=='3'){
-                            document.querySelector('#T3').innerHTML = x.slice(1);
+                            document.querySelector('#T3').innerText = x.slice(1);
                         }
                         if(x[0]=='4'){
-                            document.querySelector('#T4').innerHTML = x.slice(1);
+                            document.querySelector('#T4').innerText = x.slice(1);
                         }
                         if(x[0]=='5'){
-                            document.querySelector('#T5').innerHTML = x.slice(1);
+                            document.querySelector('#T5').innerText = x.slice(1);
                         }
                         if(x[0]=='6'){
-                            document.querySelector('#T6').innerHTML = x.slice(1);
+                            document.querySelector('#T6').innerText = x.slice(1);
                         }
                         if(x[0]=='7'){
-                            document.querySelector('#T7').innerHTML = x.slice(1);
+                            document.querySelector('#T7').innerText = x.slice(1);
                         }
                     }
                 }
             };
-            xhr.open("POST","ThoiKhoaBieu_2.php", true);
+            xhr.open("POST","danh_Sach_Sv_GV_2.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("tuan=" + Svalue_tuan +"&year=" + Svalue_year + "&hoc_ki=" + Svalue_hk );
         }
-        onChange();
+
+        
     </script>
+    
+    
+    <script src="Responsive-DarkMode.js">
+    <script src="Hide-Menu.js"></script>
+    <script src="hoc_phan.js"></script>
+
 </body>
 </html>
