@@ -369,8 +369,9 @@ tr
 table, th, td{
     border: 2px solid var(--text-color);
     border-collapse: collapse;
-    padding:1.5%;
+    /* padding:1.5%; */
     margin: 10px;
+    height: 40px;
 }
 
 table{
@@ -393,4 +394,53 @@ table tr:first-child {
 
 .container{
     background-color: var(--body-color);
+}
+.color{
+    color: var(--text-color);
+}
+.color2{
+    color: var(--toggle-color);
+    cursor: pointer;
+}
+
+
+
+.background-sub-container{
+    z-index: 101;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.sub-container{
+    width: 60%;
+    height: 600px;
+    background-color: var(--sidebar-color);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: auto;
+    border-radius: 15px;
+    color: var(--text-color);
+}
+.sub-container .close-sub-container{
+    text-align: right;
+    font-size: 40px;
+}
+.sub-container .close-sub-container i {
+    display: block;
+    cursor: pointer;
+}
+.noi-dung-sub-container{
+    padding: 10px 20px;
+}
+.tieu-de{
+    font-size: 30px;
+}
+.open-sub-container{
+    display: block;
 }

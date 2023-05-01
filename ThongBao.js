@@ -49,3 +49,4 @@ mangXemChiTiet.forEach(function(node){
         noiDung_SubContainer.innerHTML=noiDung
     })
 })
+
