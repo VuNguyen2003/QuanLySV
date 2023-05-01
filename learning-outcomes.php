@@ -217,6 +217,7 @@ $kq = $conn->query($query);
             </div>
         </div>
     </div>
+    <?php $conn->close() ?>
     <script src="Responsive-DarkMode.js"></script>
     <script src="Hide-Menu.js"></script>
     <script>
