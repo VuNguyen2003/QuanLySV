@@ -26,10 +26,8 @@
     
         
     if(isset($_POST['mssv'])){
-       
         unset($_SESSION['mssv_tkb']);
         $_SESSION['mssv_tkb'] = $_POST['mssv'];
-        
     }
     
     echo "<pre>";
