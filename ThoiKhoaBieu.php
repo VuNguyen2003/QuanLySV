@@ -128,7 +128,7 @@
             <div class = "header">
                 <div class="namhoc">
                     <h3>Năm học</h3>
-                    <select id="year" class="combobox">
+                    <select id="year" class="combobox" onChange="onChange()">
                         <option value="0" >0</option>
                         <option value="2022">2022</option>
                         <option value="2023" selected >2023</option>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="hocky">
                     <h3>Học kỳ</h3>
-                    <select id="hoc_ki" class="combobox">
+                    <select id="hoc_ki" class="combobox" onChange="onChange()">
                         <option value="1" >1</option>
                         <option value="2" selected>2</option>
                     </select>
@@ -207,7 +207,7 @@
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(this.responseText);
                     const string=this.responseText;
-                    const va=string.split('.');
+                    const va=string.split(',');
                     for(let x of va){
                         if(x[0]=='2'){
                             document.querySelector('#T2').innerHTML = x.slice(1);
